@@ -44,7 +44,7 @@ function resetTimer(){
     setTimer();
     startBtn.disabled = false;
     const listTagName= document.getElementsByTagName("li");
-    listTagName.remove();
+    listTagName.removeChild();
     
 }
 
