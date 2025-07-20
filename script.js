@@ -43,9 +43,17 @@ function resetTimer(){
     clearInterval(interval);
     setTimer();
     startBtn.disabled = false;
-    const listTagName= document.getElementsByTagName("li");
-    listTagName.removeChild();
-    
+
+
+    //To erase previous lap times when reset clicked.
+    const lapTimes = document.querySelectorAll('li');
+    console.log(lapTimes);
+
+    lapTimes.forEach(removeElements);
+}
+
+function removeElements(element){
+    element.remove();
 }
 
 function updateTimer(){
