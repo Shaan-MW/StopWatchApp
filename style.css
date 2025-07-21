@@ -15,6 +15,7 @@ body{
     justify-content: center;
     height: 100vh;
     width:100vw;
+    transition: all .2s ease;
 }
 
 .container{
@@ -115,3 +116,38 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+
+.colorChoice{
+    position:absolute;
+    right: 0;
+    background-color: white;
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+.colorChoice div{
+    width: 60px;
+    height:60px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+.red{
+    background-color: #E41b17;
+}
+
+.green{
+    background-color: #228c22;
+}
+
+.yellow{
+    background-color: purple;
+}
+
+.blue{
+    background-color:#388AD6;
+}
+

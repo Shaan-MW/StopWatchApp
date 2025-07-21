@@ -47,8 +47,6 @@ function resetTimer(){
 
     //To erase previous lap times when reset clicked.
     const lapTimes = document.querySelectorAll('li');
-    console.log(lapTimes);
-
     lapTimes.forEach(removeElements);
 }
 
@@ -77,4 +75,72 @@ function setTimer(){
 
 function padTime(time){
     return time.toString().padStart(2,'0');
+}
+
+
+const redTheme = document.querySelector('.red');
+const greenTheme = document.querySelector('.green');
+const yellowTheme = document.querySelector('.yellow');
+const blueTheme = document.querySelector('.blue');
+const bodyElement = document.querySelector('body');
+
+
+redTheme.addEventListener('click',changeBgColortoRed);
+yellowTheme.addEventListener('click',changeBgColortoYellow);
+greenTheme.addEventListener('click',changeBgColortoGreen);
+blueTheme.addEventListener('click',changeBgColortoBlue);
+
+const btns=document.querySelectorAll('button');
+
+
+function changeBgColortoRed(){
+    bodyElement.classList.remove('yellow');
+    bodyElement.classList.remove('green');
+    bodyElement.classList.remove('blue');
+    bodyElement.classList.add('red');
+
+    btns.forEach(changeColor);
+    function changeColor(element){
+        element.style.backgroundColor = '#E41b17';
+    }
+
+}
+
+function changeBgColortoYellow(){
+
+    bodyElement.classList.remove('green');
+    bodyElement.classList.remove('blue');
+    bodyElement.classList.remove('red');
+    bodyElement.classList.add('yellow');
+
+    
+    btns.forEach(changeColor);
+    function changeColor(element){
+        element.style.backgroundColor = 'purple';
+    }
+}
+
+function changeBgColortoGreen(){
+        bodyElement.classList.remove('blue');
+    bodyElement.classList.remove('red');
+    bodyElement.classList.remove('yellow');
+    bodyElement.classList.add('green');
+
+    
+    btns.forEach(changeColor);
+    function changeColor(element){
+        element.style.backgroundColor = '#228c22';
+    }
+}
+function changeBgColortoBlue(){
+        bodyElement.classList.remove('red');
+    bodyElement.classList.remove('yellow');
+    bodyElement.classList.remove('green');
+    bodyElement.classList.add('blue');
+
+    
+    btns.forEach(changeColor);
+    function changeColor(element){
+        element.style.backgroundColor = '#388ad6';
+    }
 }
